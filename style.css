@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+    background: #12130F;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#navbar__logo img:hover {
+    transform: scale(1.025);
+    transition: all 0.3s ease-out;
+}
+
+#navbar__logo img {
+    width: 200px;
+    transition: all 0.3s ease-out;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #b91f33;
+    color: #fff;
+}
+
+.button:hover {
+    background: #8d0618;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #8d0618;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #8d0618;
+}
+
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 80vh;
+        z-index: -1;
+        background: #12130F;
+    }
+
+    .navbar__menu.active {
+        background: #12130F;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: auto;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.5s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        /* height: 80px; */
+        margin: 0;
+    }
+
+    .navbar__toggle {
+        cursor: pointer;
+    }
+    .navbar__toggle .bar {
+        display: block;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+.title__box {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(img/kluziste-plocha.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__box--text {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__box h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 1.5;
+}
+
+.underline__title {
+    text-decoration: underline;
+    text-decoration-color: #b91f33;
+    text-decoration-thickness: 4px;
+}
+
+@media screen and (max-width: 1300px) {
+    .title__box--text {
+        padding-top: 50px;
+        text-align: center;
+    }
+}
+
+.partners {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background: #12130F;
+}
+
+.partners__container {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    height: auto;
+}
+
+.partners__title h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    border-bottom: 4px solid #b91f33;
+    text-transform: uppercase;
+}
+
+.partners__icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.partners__icons img {
+    padding: 1rem;
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .partners__container {
+        margin: 2rem 1rem;
+    }
+}
+
+.informations {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #12130F;
+}
+
+.informations__container {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing, .sharping {
+    width: 400px;
+    height: auto;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 2px solid #b91f33;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+}
+
+.pricing:hover, .sharping:hover {
+    transform: scale(1.025);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.informations__container ul {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+.pricing h2, .sharping h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #b91f33;
+}
+
+.pricing h3 {
+    padding: 1rem 0;
+}
+
+.sharping .opening-time {
+    padding: 1rem 0;
+}
+
+.sharping {
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1300px) {
+
+}
