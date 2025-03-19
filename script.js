@@ -30,3 +30,11 @@ logo.addEventListener("click", function(event){
     event.preventDefault();
     pageStart.scrollIntoView({behavior: "smooth"})
 })
+
+
+let contactButton = document.querySelector("#navbar__btn--contact-button")
+let contactRezervation = document.querySelector(".contact")
+contactButton.addEventListener("click", function(event){
+    event.preventDefault();
+    contactRezervation.scrollIntoView({behavior: "smooth"})
+})
