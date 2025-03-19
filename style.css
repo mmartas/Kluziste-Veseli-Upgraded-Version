@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gidugu&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Anton";
+    font-weight: normal;
 }
 
 .navbar {
@@ -54,20 +57,19 @@
 
 .navbar__item {
     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
 }
 
 .navbar__links {
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #12130F;
     white-space: nowrap;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-out;
 }
 
 .navbar__btn {
@@ -99,16 +101,18 @@
 }
 
 .navbar__links:hover {
-    color: #8d0618;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid #8d0618;
+    transition: all 0.3s ease-out;
+    text-decoration: underline;
+    text-decoration-color: #8d0618;
+    text-decoration-thickness: 2px;
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1150px) {
     .navbar__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         height: 80px;
         z-index: 1;
         width: 100%;
@@ -124,8 +128,8 @@
         position: absolute;
         top: -1000px;
         opacity: 0;
-        transition: all 0.5s ease;
-        height: 80vh;
+        transition: all 0.3s ease;
+        height: auto;
         z-index: -1;
         background: #12130F;
     }
@@ -134,7 +138,7 @@
         background: #12130F;
         top: 100%;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         z-index: 99;
         height: auto;
         font-size: 1.6rem;
@@ -154,24 +158,22 @@
 
     .navbar__item {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
     }
 
     .navbar__links {
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
+        padding: 0;
     }
 
     .navbar__btn {
-        padding-bottom: 2rem;
+        padding: 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .button {
@@ -179,12 +181,12 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        /* height: 80px; */
         margin: 0;
     }
 
     .navbar__toggle {
         cursor: pointer;
+        padding-right: 25px;
     }
     .navbar__toggle .bar {
         display: block;
@@ -212,6 +214,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-attachment: fixed; */
 }
 
 .title__box--text {
@@ -224,7 +227,7 @@
 }
 
 .title__box h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -311,7 +314,7 @@
     flex-wrap: wrap;
 }
 
-.pricing, .sharping {
+.informations__one-card {
     width: 400px;
     height: auto;
     padding: 2rem;
@@ -326,7 +329,7 @@
     line-height: 1.5;
 }
 
-.pricing:hover, .sharping:hover {
+.informations__one-card:hover {
     transform: scale(1.025);
     transition: all 0.3s ease-out;
     cursor: pointer;
@@ -337,7 +340,7 @@
     line-height: 1.5;
 }
 
-.pricing h2, .sharping h2 {
+.informations__one-card h2 {
     text-transform: uppercase;
     font-size: 1.5rem;
     border-bottom: 2px solid #b91f33;
@@ -354,6 +357,26 @@
 .sharping .opening-time {
     padding: 1rem 0;
 }
+
+.informations__one-card .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.informations__one-card .email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+
 
 @media screen and (max-width: 1300px) {
 
