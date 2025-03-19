@@ -67,6 +67,7 @@
     white-space: nowrap;
     font-weight: bold;
     transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .navbar__btn {
@@ -261,6 +262,12 @@
     height: auto;
 }
 
+.partners__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .partners__title h2 {
     font-size: 2.5rem;
     color: #fff;
@@ -316,6 +323,7 @@
     align-items: center;
     flex-direction: column;
     transition: all 0.3s ease-out;
+    line-height: 1.5;
 }
 
 .pricing:hover, .sharping:hover {
@@ -339,12 +347,12 @@
     padding: 1rem 0;
 }
 
-.sharping .opening-time {
-    padding: 1rem 0;
+.pricing ul li:nth-child(1):hover {
+    text-decoration: underline;
 }
 
-.sharping {
-    line-height: 1.5;
+.sharping .opening-time {
+    padding: 1rem 0;
 }
 
 @media screen and (max-width: 1300px) {
