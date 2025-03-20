@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gidugu&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +7,15 @@
     font-weight: normal;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #12130F;
+    padding: 1rem 0;
+}
+
+/* MENU */
 .navbar {
     background: #12130F;
     height: 80px;
@@ -38,13 +46,13 @@
     cursor: pointer;
 }
 
-#navbar__logo img:hover {
-    transform: scale(1.025);
+#navbar__logo img {
+    width: 200px;
     transition: all 0.3s ease-out;
 }
 
-#navbar__logo img {
-    width: 200px;
+#navbar__logo img:hover {
+    transform: scale(1.025);
     transition: all 0.3s ease-out;
 }
 
@@ -70,6 +78,13 @@
     text-decoration-color: #12130F;
     white-space: nowrap;
     transition: all 0.3s ease-out;
+}
+
+.navbar__links:hover {
+    transition: all 0.3s ease-out;
+    text-decoration: underline;
+    text-decoration-color: #8d0618;
+    text-decoration-thickness: 2px;
 }
 
 .navbar__btn {
@@ -99,14 +114,6 @@
     background: #8d0618;
     transition: all 0.3s ease;
 }
-
-.navbar__links:hover {
-    transition: all 0.3s ease-out;
-    text-decoration: underline;
-    text-decoration-color: #8d0618;
-    text-decoration-thickness: 2px;
-}
-
 
 @media screen and (max-width: 1150px) {
     .navbar__container {
@@ -205,7 +212,7 @@
     }
 }
 
-
+/* 1.SEKCE - NADPIS */
 .title__box {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(img/kluziste-plocha.jpg);
     background-size: cover;
@@ -248,6 +255,7 @@
     }
 }
 
+/* 2. SEKCE - PARTNEŘI */
 .partners__container {
     max-width: 1300px;
     width: 100%;
@@ -289,14 +297,8 @@
     }
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    height: auto;
-    background: #12130F;
-    padding: 1rem 0;
-}
 
+/* 3. SEKCE - INFORMACE */
 .informations__container {
     max-width: 1300px;
     width: 100%;
@@ -320,6 +322,13 @@
     flex-direction: column;
     transition: all 0.3s ease-out;
     line-height: 1.5;
+    scroll-margin-top: 80px;
+}
+
+.informations__one-card h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #b91f33;
 }
 
 .informations__one-card:hover {
@@ -333,38 +342,23 @@
     line-height: 1.5;
 }
 
-.informations__one-card h2 {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #b91f33;
-}
-
-.pricing h3 {
+.informations__one-card h3 {
     padding: 1rem 0;
 }
 
-.pricing ul li:nth-child(1):hover {
+/* .pricing ul li:nth-child(1):hover {
     text-decoration: underline;
-}
+} */
 
 .sharping .opening-time {
     padding: 1rem 0;
 }
 
-.informations__one-card .phone {
+.informations__one-card .phone-mail {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-}
-
-.informations__one-card .email {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
     padding-bottom: 1.5rem;
 }
@@ -376,4 +370,11 @@
     flex-direction: column;
     margin: 0 auto;
     gap: 1rem;
+    scroll-margin-top: 80px;
+}
+
+@media screen and (max-width: 1300px){
+    .webkamera__container {
+        padding: 0 1rem;
+    }
 }

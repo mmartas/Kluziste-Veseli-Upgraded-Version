@@ -28,7 +28,7 @@ let logo = document.querySelector("#navbar__logo")
 let pageStart = document.querySelector("header")
 logo.addEventListener("click", function(event){
     event.preventDefault();
-    pageStart.scrollIntoView({behavior: "smooth"})
+    pageStart.scrollIntoView({behavior: "smooth"});
 })
 
 
@@ -36,5 +36,12 @@ let contactButton = document.querySelector("#navbar__btn--contact-button")
 let contactRezervation = document.querySelector(".contact")
 contactButton.addEventListener("click", function(event){
     event.preventDefault();
-    contactRezervation.scrollIntoView({behavior: "smooth"})
+    contactRezervation.scrollIntoView({behavior: "smooth"});
+})
+
+let webkameraButton = document.querySelector("#navbar__links--webkamera--button")
+let webkamera = document.querySelector(".webkamera__container")
+webkameraButton.addEventListener("click", function(event){
+    event.preventDefault()
+    webkamera.scrollIntoView({behavior: "smooth"})
 })
