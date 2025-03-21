@@ -13,6 +13,9 @@ let pricing = document.querySelector(".pricing")
 priceButton.addEventListener("click", function(event){
     event.preventDefault();
     pricing.scrollIntoView({behavior: "smooth"});
+    if(menuLinks.classList.contains("active")) {
+        menuLinks.classList.remove("active")
+    }
 })
 
 // BROUŠENÍ
@@ -21,6 +24,9 @@ let sharping = document.querySelector(".sharping")
 sharpButton.addEventListener("click", function(event){
     event.preventDefault();
     sharping.scrollIntoView({behavior: "smooth"});
+    if(menuLinks.classList.contains("active")) {
+        menuLinks.classList.remove("active")
+    }
 })
 
 // VÝCHOZÍ STAV/ZAČÁTEK
@@ -37,6 +43,9 @@ let contactRezervation = document.querySelector(".contact")
 contactButton.addEventListener("click", function(event){
     event.preventDefault();
     contactRezervation.scrollIntoView({behavior: "smooth"});
+    if(menuLinks.classList.contains("active")) {
+        menuLinks.classList.remove("active")
+    }
 })
 
 let webkameraButton = document.querySelector("#navbar__links--webkamera--button")
@@ -44,4 +53,7 @@ let webkamera = document.querySelector(".webkamera__container")
 webkameraButton.addEventListener("click", function(event){
     event.preventDefault()
     webkamera.scrollIntoView({behavior: "smooth"})
+    if(menuLinks.classList.contains("active")) {
+        menuLinks.classList.remove("active")
+    }
 })
