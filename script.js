@@ -15,6 +15,7 @@ priceButton.addEventListener("click", function(event){
     pricing.scrollIntoView({behavior: "smooth"});
     if(menuLinks.classList.contains("active")) {
         menuLinks.classList.remove("active")
+        menu.classList.remove("is-active")
     }
 })
 
@@ -26,6 +27,7 @@ sharpButton.addEventListener("click", function(event){
     sharping.scrollIntoView({behavior: "smooth"});
     if(menuLinks.classList.contains("active")) {
         menuLinks.classList.remove("active")
+        menu.classList.remove("is-active")
     }
 })
 
@@ -35,6 +37,10 @@ let pageStart = document.querySelector("header")
 logo.addEventListener("click", function(event){
     event.preventDefault();
     pageStart.scrollIntoView({behavior: "smooth"});
+    if(menuLinks.classList.contains("active")) {
+        menuLinks.classList.remove("active")
+        menu.classList.remove("is-active")
+    }
 })
 
 
@@ -45,6 +51,7 @@ contactButton.addEventListener("click", function(event){
     contactRezervation.scrollIntoView({behavior: "smooth"});
     if(menuLinks.classList.contains("active")) {
         menuLinks.classList.remove("active")
+        menu.classList.remove("is-active")
     }
 })
 
@@ -55,5 +62,6 @@ webkameraButton.addEventListener("click", function(event){
     webkamera.scrollIntoView({behavior: "smooth"})
     if(menuLinks.classList.contains("active")) {
         menuLinks.classList.remove("active")
+        menu.classList.remove("is-active")
     }
 })
