@@ -313,7 +313,7 @@
 
 .informations__one-card {
     width: 400px;
-    height: auto;
+    height: 100%;
     padding: 2rem;
     border-radius: 4px;
     border: 2px solid #b91f33;
@@ -322,7 +322,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    transition: all 0.3s ease-out;
     line-height: 1.5;
     scroll-margin-top: 80px;
 }
@@ -333,7 +332,11 @@
     border-bottom: 2px solid #b91f33;
 }
 
-.informations__one-card:hover {
+.informations__one-card--inner {
+    transition: all 0.3s ease-out;
+}
+
+.informations__one-card--inner:hover {
     transform: scale(1.025);
     transition: all 0.3s ease-out;
     cursor: pointer;
