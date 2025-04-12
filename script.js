@@ -65,3 +65,37 @@ webkameraButton.addEventListener("click", function(event){
         menu.classList.remove("is-active")
     }
 })
+
+const pricingSliding = document.querySelector(".pricing");
+const sharpingSliding = document.querySelector(".sharping")
+const contactSliding = document.querySelector(".contact")
+
+const pricingSlidingFunction = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+        pricingSliding.classList.add('visible');
+        }
+    });
+    });
+    
+    pricingSlidingFunction.observe(pricingSliding);
+
+const sharpingSlidingFunction = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+        sharpingSliding.classList.add('visible');
+        }
+    });
+    });
+    
+    sharpingSlidingFunction.observe(sharpingSliding);
+
+const contactSlidingFunction = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+        contactSliding.classList.add('visible');
+        }
+    });
+    });
+    
+    contactSlidingFunction.observe(contactSliding);
