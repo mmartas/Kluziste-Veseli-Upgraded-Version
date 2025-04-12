@@ -364,26 +364,26 @@
     gap: 1rem;
     padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 1307px){
-    .pricing {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: all 1s;
-    }
 
-    .sharping {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 1s;
-    }
-
-    .contact {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: all 1s;
-    }
+.pricing {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s;
 }
-@media screen and (min-width: 877px){
+
+.sharping {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.contact {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s;
+}
+
+@media screen and (max-width: 1307px){
     .pricing {
         opacity: 0;
         transform: translateX(-50px);
@@ -409,8 +409,6 @@
         transition: all 1s;
     }
 }
-
-
 .pricing.visible {
     opacity: 1;
     transform: translate(0, 0)
